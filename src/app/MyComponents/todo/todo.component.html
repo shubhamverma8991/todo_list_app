@@ -1,3 +1,13 @@
-<p>Todo HTML</p>
+<!-- <p>Todo HTML</p> -->
+<div class="container">
+  <app-addtodo></app-addtodo>
 
-<p *ngFor="let to of todo">{{ to.title }}</p>
+  <hr />
+
+  <div *ngFor="let to of todo">
+    <app-single-tdo
+      [to]="to"
+      (todoDelete)="parentDeleltefunc($event)"
+    ></app-single-tdo>
+  </div>
+</div>

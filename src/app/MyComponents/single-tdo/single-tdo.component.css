@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+}
+.container {
+  width: 50%;
+}
+.div {
+  display: flex;
+  justify-content: space-between;
+}

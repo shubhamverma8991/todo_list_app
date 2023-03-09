@@ -7,7 +7,7 @@ import { Todo } from 'src/app/Todo';
   styleUrls: ['./todo.component.css'],
 })
 export class TodoComponent {
-  todo: Todo[] | undefined;
+  todo: any;
   constructor() {
     this.todo = [
       {
@@ -29,6 +29,11 @@ export class TodoComponent {
         active: true,
       },
     ];
+  }
+  parentDeleltefunc(to: any) {
+    console.log(to);
+    const index = this.todo.indexOf(to);
+    this.todo.splice(index, 1);
   }
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
